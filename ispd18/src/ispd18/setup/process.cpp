@@ -22,12 +22,14 @@
 
 // Processes
 #include "ispd18/demo/ExampleProcess.h"
+#include "ispd18/cobaia/CobaiaRandom.h"
 
 // Registration
 namespace Rsyn {
 static Startup registerProcesses([]{
 	Rsyn::Session session;
 	session.registerProcess<ExampleProcess>("example.process");
+	session.registerProcess<CobaiaRandom>("forrest");
 });
 } // end namespace
 

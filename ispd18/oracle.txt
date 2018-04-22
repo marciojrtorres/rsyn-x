@@ -1,0 +1,6 @@
+Bound
+
+x1 83600 x2 104400 = height 20800
+y1 71820 y2 88920  = width 17100
+
+/home/torres/Ferramentas EDA GDrive/ISPD/ispd18_sample/ispd18_sample.rsyn

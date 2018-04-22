@@ -103,6 +103,9 @@ public:
 	Range<ReferenceListCollection<Instance>>
 	allInstances();
 
+	Instance
+	randomInstance();
+
 	//! @brief Returns an iterable collection of all ports instantiated in this
 	//!        module.
 	Range<ReferenceListCollection<Port>>

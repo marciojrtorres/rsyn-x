@@ -66,7 +66,22 @@ void ExampleService::doSomething() {
 	const int N = 10;
 	
 	int counter;
-	
+
+	// Traverse nets and their routing guides.
+	std::cout << "Nets:\n"; 
+	counter = 0;
+	for (Rsyn::Net net : module.allNets()) {
+		std::cout << net.getName() << "\n";
+
+		const Rsyn::NetGuide &netGuide = guideService->getGuide(net);
+		for (const Rsyn::LayerGuide &layerGuide : netGuide.allLayerGuides()) {
+			std::cout << "  " << layerGuide.getBounds() << " " << layerGuide.getLayer().getName() << "\n";
+		} // end for
+
+		if (++counter >= N) {
+			break;
+		} // end if
+	} // end if
         std:cout << "Up and Running -------------------------------------------------\n";
 	// Traverse cells and print their width and height.
 	std::cout << "Cells:\n";

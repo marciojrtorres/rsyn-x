@@ -5,8 +5,13 @@
                    displayName="debug"
                    projectFiles="true"
                    root="../../../build/debug">
+      <itemPath>../../../build/debug/moc_GraphicsView.cpp</itemPath>
+      <itemPath>../../../build/debug/moc_MainWindow.cpp</itemPath>
+      <itemPath>../../../build/debug/moc_PropertyDialog.cpp</itemPath>
       <itemPath>../../../build/debug/qrc_images.cpp</itemPath>
       <itemPath>../../../build/debug/rsyn_automoc.cpp</itemPath>
+      <itemPath>../../../build/debug/ui_MainWindow.h</itemPath>
+      <itemPath>../../../build/debug/ui_PropertyDialog.h</itemPath>
     </logicalFolder>
     <logicalFolder name="release"
                    displayName="release"
@@ -190,6 +195,10 @@
         <in>Shell.cpp</in>
       </df>
       <df name="util">
+        <df name="geometry">
+          <in>Polygon.cpp</in>
+          <in>Rect.cpp</in>
+        </df>
         <in>Logger.cpp</in>
         <in>RCTreeExtractor.cpp</in>
         <in>Stepwatch.cpp</in>
@@ -296,13 +305,14 @@
       <makefileType>
         <makeTool>
           <buildCommandWorkingDir>../../../build/debug</buildCommandWorkingDir>
-          <buildCommand>${MAKE} -f Makefile -j 8</buildCommand>
+          <buildCommand>${MAKE} -f Makefile -j 4</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
           <executablePath>../../../build/debug/bin/rsyn</executablePath>
           <cTool>
             <incDir>
               <pElem>../../../build/debug</pElem>
               <pElem>..</pElem>
+              <pElem>../../../rsyn/src/rsyn/export</pElem>
               <pElem>../../../rsyn/src</pElem>
               <pElem>../../../rsyn/include</pElem>
               <pElem>../../src</pElem>
@@ -321,7 +331,6 @@
               <Elem>QT_OPENGL_LIB</Elem>
               <Elem>QT_PRINTSUPPORT_LIB</Elem>
               <Elem>QT_WIDGETS_LIB</Elem>
-              <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
             </preprocessorList>
           </cTool>
           <ccTool>
@@ -329,17 +338,6 @@
             <incDir>
               <pElem>../../../build/debug</pElem>
               <pElem>..</pElem>
-              <pElem>../../../rsyn/src</pElem>
-              <pElem>../../../rsyn/include</pElem>
-              <pElem>../../src</pElem>
-              <pElem>../../include</pElem>
-              <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
-              <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
-              <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
-              <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
-              <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
-              <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
-              <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
             </incDir>
             <preprocessorList>
               <Elem>QT_CORE_LIB</Elem>
@@ -347,7 +345,6 @@
               <Elem>QT_OPENGL_LIB</Elem>
               <Elem>QT_PRINTSUPPORT_LIB</Elem>
               <Elem>QT_WIDGETS_LIB</Elem>
-              <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
             </preprocessorList>
           </ccTool>
         </makeTool>
@@ -357,6 +354,21 @@
           <preBuildFirst>true</preBuildFirst>
         </preBuild>
       </makefileType>
+      <item path="../../../build/debug/moc_GraphicsView.cpp"
+            ex="true"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../build/debug/moc_MainWindow.cpp"
+            ex="true"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../build/debug/moc_PropertyDialog.cpp"
+            ex="true"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="../../../build/debug/qrc_images.cpp"
             ex="false"
             tool="1"
@@ -460,6 +472,22 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/Report.cpp"
@@ -467,6 +495,22 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/WebLogger.cpp"
@@ -474,6 +518,22 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/Writer.cpp"
@@ -481,6 +541,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/image/DrawingBoard.cpp"
@@ -544,6 +618,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/parser/script/ScriptReader.cpp"
@@ -551,6 +639,22 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/parser/script/base/Script.tab.cc"
@@ -586,6 +690,22 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/parser/verilog/base/SimplifiedVerilog.tab.cc"
@@ -607,6 +727,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/reader/DesignPositionReader.cpp"
@@ -614,6 +748,22 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/reader/GenericReader.cpp"
@@ -621,6 +771,22 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/reader/ICCAD15Reader.cpp"
@@ -628,6 +794,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/reader/ICCAD17Reader.cpp"
@@ -635,6 +815,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/reader/ISPD2012Reader.cpp"
@@ -642,6 +836,22 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/reader/ISPD2014Reader.cpp"
@@ -649,6 +859,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/reader/ISPD2018Reader.cpp"
@@ -656,6 +880,22 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/reader/PopulateRsyn.cpp"
@@ -663,6 +903,22 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/io/reader/SizingISPDReader.cpp"
@@ -670,6 +926,22 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="../../../rsyn/src/rsyn/ispd18/RoutingGuide.cpp"
@@ -1022,6 +1294,20 @@
         <ccTool flags="1">
         </ccTool>
       </item>
+      <item path="../../../rsyn/src/rsyn/util/geometry/Polygon.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="../../../rsyn/src/rsyn/util/geometry/Rect.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
       <item path="../../src/x/infra/iccad15/Infrastructure.cpp"
             ex="false"
             tool="1"
@@ -1042,6 +1328,20 @@
       </item>
       <item path="../../src/x/main.cpp" ex="false" tool="1" flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../src/x/math/lnalg/lnalg.cpp" ex="false" tool="1" flavor2="8">
@@ -1057,6 +1357,22 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="../../src/x/opto/example/PhysicalDesignEx.cpp"
@@ -1064,6 +1380,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../src/x/opto/example/QuadraticPlacement.cpp"
@@ -1071,6 +1401,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../src/x/opto/example/RandomPlacement.cpp"
@@ -1078,6 +1422,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../src/x/opto/example/SandboxTest.cpp"
@@ -1085,6 +1443,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../src/x/opto/ext/FastPlace.cpp" ex="false" tool="1" flavor2="8">
@@ -1145,6 +1517,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../src/x/opto/ufrgs/qpdp/OverlapRemover.cpp"
@@ -1152,6 +1538,22 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
         </ccTool>
       </item>
       <item path="../../src/x/opto/ufrgs/qpdp/RelaxedPinPosition.cpp"
@@ -1159,6 +1561,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../src/x/opto/ufrgs/qpdp/TDQuadraticFlow.cpp"
@@ -1166,6 +1582,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../src/x/opto/ufrgs/qpdp/qpdpb2b.cpp"
@@ -1173,6 +1603,20 @@
             tool="1"
             flavor2="8">
         <ccTool flags="1">
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
         </ccTool>
       </item>
       <item path="../../src/x/qt/overlay/example/ExampleOverlay.cpp"
@@ -1219,6 +1663,560 @@
         <ccTool flags="1">
         </ccTool>
       </item>
+      <folder path="0/3rdparty">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/io/image">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/io/parser/bookshelf">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/io/parser/guide-ispd18">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/io/parser/lef_def">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/io/parser/liberty">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/io/parser/operations">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/io/parser/script/base">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/io/parser/sdc">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/io/parser/spef">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/io/parser/verilog/base">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/ispd18">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/model">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/phy">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/qt">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/session">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/setup">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/shell">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>RSYN_ENABLE_OVERLAP_REMOVER=1</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/util">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="1/infra">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="1/io">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="1/jezz">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="1/math">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="1/opto/ext">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="1/opto/ufrgs/ispd16">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="1/qt">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="1/setup">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="1/util">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="debug">
+        <ccTool>
+          <incDir>
+            <pElem>../../../rsyn/src/rsyn/export</pElem>
+            <pElem>../../../rsyn/src</pElem>
+            <pElem>../../../rsyn/include</pElem>
+            <pElem>../../src</pElem>
+            <pElem>../../include</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtWidgets</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtGui</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtCore</pElem>
+            <pElem>/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport</pElem>
+            <pElem>/usr/include/x86_64-linux-gnu/qt5/QtOpenGL</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
     </conf>
     <conf name="Release" type="0">
       <toolsSet>

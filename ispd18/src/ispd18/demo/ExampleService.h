@@ -44,7 +44,7 @@ private:
 	Rsyn::PhysicalDesign physicalDesign;
 
 	Rsyn::PhysicalService *physicalService = nullptr;
-	Rsyn::RoutingGuide *guideService = nullptr;
+	// Rsyn::RoutingGuide *guideService = nullptr;
 
 }; // end class
 

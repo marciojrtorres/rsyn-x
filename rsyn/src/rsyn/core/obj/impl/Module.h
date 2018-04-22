@@ -234,6 +234,17 @@ Module::allInstances() {
 	return ReferenceListCollection<Instance>(data->moduleData->instances);
 } // end method
 
+inline
+Instance
+Module::randomInstance() {
+	// List<Instance> list = ;
+	return data->moduleData->instances.get(
+		rand() % data->moduleData->instances.size()
+	)->value;
+	// const int size = data->moduleData->instances->size();
+	// return data->moduleData->instances->get((int));
+}
+
 // -----------------------------------------------------------------------------
 
 inline
